@@ -1,0 +1,25 @@
+{
+  "name": "library1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'npm run build:watch' 'npm run serve'",
+    "build": "rollup -c",
+    "build:watch": "npm run build -- -w",
+    "serve": "serve -C -p 3001 dist"
+  },
+  "keywords": [],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "rollup": "^2.77.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^5.1.9",
+    "serve": "^14.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0"
+  }
+}
